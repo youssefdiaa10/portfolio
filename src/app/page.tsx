@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/Button";
-import personalImage from "@/data/images/Personal Image 3.jpeg";
+import personalImage from "@/data/images/Personal Image 4.png";
 import { projects } from "@/data/projects";
 import { ArrowDown, ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import Image from "next/image";
@@ -42,13 +42,11 @@ export default function Home() {
               />
             </div>
             <div className="portrait-label"><span className="label-mark">Y.</span><span>ENGINEER IN PROGRESS<br /><strong>DESIGN-MINDED DEVELOPER</strong></span></div>
-            <span className="hero-orbit orbit-one" />
-            <span className="hero-orbit orbit-two" />
           </div>
           <a className="scroll-cue" href="#selected-work" aria-label="Scroll to selected work"><ArrowDown size={16} />SCROLL TO EXPLORE</a>
         </section>
 
-        <section className="work-section page-shell" id="selected-work">
+        <section className="work-s ection page-shell" id="selected-work">
           <div className="section-heading">
             <div><p className="eyebrow">A FEW THINGS I&apos;VE MADE</p><h2>Selected work<span className="text-accent">.</span></h2></div>
             <Link className="text-link" href="/projects">View all projects <ArrowUpRight size={15} /></Link>

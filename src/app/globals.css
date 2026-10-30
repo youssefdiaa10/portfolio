@@ -232,9 +232,11 @@ a {
 
 .portrait-frame {
   position: absolute;
-  z-index: 0;
-  inset: 0;
+  z-index: 1;
+  width: min(100%, 430px);
+  aspect-ratio: 1;
   overflow: hidden;
+  border-radius: 50%;
   box-shadow: 0 24px 70px rgba(0, 0, 0, .32);
 }
 
@@ -242,16 +244,17 @@ a {
   position: absolute;
   inset: 0;
   border: 1px solid rgba(255, 255, 255, .17);
+  border-radius: inherit;
   background: linear-gradient(90deg, rgba(9, 13, 18, .2), transparent 44%), linear-gradient(0deg, rgba(9, 13, 18, .26), transparent 36%);
   content: "";
   pointer-events: none;
 }
 
-/* .portrait-image {
-  object-fit: cover;
+.portrait-image {
+  object-fit: fill;
   object-position: center 44%;
   filter: saturate(.96) contrast(1.03);
-} */
+}
 
 .portrait-label {
   position: absolute;
