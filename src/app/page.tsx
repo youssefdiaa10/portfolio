@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/Button";
+import personalImage from "@/data/images/Personal Image 3.jpeg";
 import { projects } from "@/data/projects";
 import { ArrowDown, ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import Image from "next/image";
@@ -27,12 +28,12 @@ export default function Home() {
               <Button href="/projects">Explore my work <ArrowRight size={16} /></Button>
               <Link className="text-link" href="/about">More about me <ArrowUpRight size={15} /></Link>
             </div>
-            <div className="hero-location"><MapPin size={15} /> Based in the United States</div>
+            <div className="hero-location"><MapPin size={15} />Based in the Egypt</div>
           </div>
           <div className="hero-visual">
             <div className="portrait-frame">
               <Image
-                src="/images/profile.jpg"
+                src={personalImage}
                 alt="Portrait of Yosof"
                 fill
                 priority
@@ -44,7 +45,7 @@ export default function Home() {
             <span className="hero-orbit orbit-one" />
             <span className="hero-orbit orbit-two" />
           </div>
-          <a className="scroll-cue" href="#selected-work" aria-label="Scroll to selected work"><ArrowDown size={16} /> SCROLL TO EXPLORE</a>
+          <a className="scroll-cue" href="#selected-work" aria-label="Scroll to selected work"><ArrowDown size={16} />SCROLL TO EXPLORE</a>
         </section>
 
         <section className="work-section page-shell" id="selected-work">
