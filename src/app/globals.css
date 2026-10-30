@@ -50,8 +50,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .text-link { display: inline-flex; align-items: center; gap: 7px; color: var(--foreground); font-size: 12px; }
 .text-link:hover { color: var(--accent); }
 .hero-location { display: flex; align-items: center; gap: 8px; margin-top: 58px; color: var(--muted); font-size: 11px; }
-.hero-visual { position: relative; display: grid; min-height: 430px; place-items: center; }
-.portrait-frame { position: relative; z-index: 1; width: min(76%, 340px); aspect-ratio: .79; overflow: hidden; border: 1px solid rgba(97, 230, 173, .44); background: var(--surface); box-shadow: 0 24px 70px rgba(0,0,0,.32); }
+.hero-visual { position: relative; display: grid; min-height: 430px; aspect-ratio: .95; place-items: center; }
+.portrait-frame { position: absolute; z-index: 0; inset: 0; overflow: hidden; border: 1px solid rgba(97, 230, 173, .44); box-shadow: 0 24px 70px rgba(0,0,0,.32); }
+.portrait-frame::after { position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.17); background: linear-gradient(90deg, rgba(9,13,18,.2), transparent 44%), linear-gradient(0deg, rgba(9,13,18,.26), transparent 36%); content: ""; pointer-events: none; }
 .portrait-image { object-fit: cover; object-position: center 44%; filter: saturate(.96) contrast(1.03); }
 .portrait-label { position: absolute; z-index: 2; right: 3%; bottom: 34px; display: flex; align-items: center; gap: 12px; padding: 13px 18px; background: rgba(9, 13, 18, .92); color: var(--muted); font-family: "Courier New", monospace; font-size: 9px; letter-spacing: .06em; line-height: 1.8; }
 .portrait-label strong { color: var(--foreground); font-size: 9px; font-weight: 400; }
@@ -113,8 +114,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero h1 { font-size: clamp(56px, 13vw, 78px); }
   .hero-description { max-width: 500px; }
   .hero-location { margin-top: 30px; }
-  .hero-visual { min-height: 380px; }
-  .portrait-frame { width: min(72%, 300px); }
+  .hero-visual { min-height: 0; }
   .hero-orbit { width: 300px; height: 300px; }
   .portrait-label { right: 0; bottom: 20px; }
   .scroll-cue { bottom: 28px; }
